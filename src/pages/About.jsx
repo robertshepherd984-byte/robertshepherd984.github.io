@@ -21,8 +21,8 @@ const About = () => {
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               I'm Robert Shepherd, an aspiring developer based in Phoenix, Arizona and wanting to move to 
-              Cebu, Phillipines. My journey into tech started with curiosity and has grown into a passionate 
-              pursuit of building meaningful solutions through code.
+              Cebu, Phillipines. Would like to be with my fiancee. My journey into tech started with 
+              curiosity and has grown into a passionate pursuit of building meaningful solutions through code.
             </p>
           </div>
 
