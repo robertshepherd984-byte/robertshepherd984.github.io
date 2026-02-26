@@ -1,3 +1,17 @@
+/* Force dark mode on everything */
+html, body, #root {
+  background-color: #111827 !important;
+  color: #f3f4f6 !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  border-color: #374151 !important;
+}
+
+/* Your Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
