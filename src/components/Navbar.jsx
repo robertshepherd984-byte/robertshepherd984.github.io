@@ -1,30 +1,24 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Force dark mode on page load
-  useEffect(() => {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  }, []);
-
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo / Name */}
-          <Link to="/" className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <Link to="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
             Robert Shepherd
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            <Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-blue-400 transition-colors font-medium">
               About
             </Link>
             <a 
@@ -36,11 +30,10 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button (Hamburger) */}
+          {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -54,19 +47,19 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+          <div className="md:hidden py-4 border-t border-gray-800">
             <div className="flex flex-col space-y-3">
               <Link 
                 to="/" 
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 px-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="text-gray-300 hover:text-blue-400 py-2 px-2 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 Home
               </Link>
               <Link 
                 to="/about" 
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 px-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="text-gray-300 hover:text-blue-400 py-2 px-2 rounded-lg hover:bg-gray-800 transition-colors"
               >
                 About
               </Link>
