@@ -70,25 +70,25 @@ const ContactForm = () => {
           
           {/* Name field */}
           <div>
-            <label className="block text-gray-300 mb-2">Your Name</label>
+            <label className="block text-gray-300 mb-2">Company</label>
             <input
               type="text"
               name="name"
               required
               className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
-              placeholder="John Doe"
+              placeholder="Company Name"
             />
           </div>
 
           {/* Email field */}
           <div>
-            <label className="block text-gray-300 mb-2">Your Email</label>
+            <label className="block text-gray-300 mb-2">Company Email</label>
             <input
               type="email"
               name="email"
               required
               className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
-              placeholder="you@example.com"
+              placeholder="Company@example.com"
             />
           </div>
 
