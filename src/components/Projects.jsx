@@ -20,11 +20,11 @@ const Projects = () => {
       image: null
     },
     {
-      title: "Task Manager",
-      description: "A to-do list app with local storage. Add, complete, and delete tasks. Great for learning React state management.",
-      tech: ["React", "Local Storage", "Hooks"],
-      github: "https://github.com/robertshepherd984-byte/task-manager",
-      live: "https://robertshepherd984-byte.github.io/task-manager",
+      title: "Todo App",
+      description: "A full-featured todo app built with React. Features local storage, filtering, and a clean dark mode interface.",
+      tech: ["React", "Hooks", "Local Storage", "Tailwind CSS"],
+      github: "https://github.com/robertshepherd984-byte/todo-app",
+      live: "/#/todo",  // This will work both locally and on GitHub Pages
       image: null
     }
   ];
