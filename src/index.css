@@ -10,6 +10,9 @@ html, body, #root {
 * {
   border-color: #374151 !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Your Tailwind directives */
 @tailwind base;

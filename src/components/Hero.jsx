@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Add this import at the top
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return(
@@ -12,10 +12,18 @@ const Hero = () => {
                     I turn challenges into learning opportunities.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#projects" className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium">
+                    {/* Updated this button to scroll to projects */}
+                    <button 
+                        onClick={() => {
+                        const projectsSection = document.getElementById('projects');
+                            if (projectsSection) {
+                         projectsSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }}
+                        className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium"
+                    >
                         View My Work
-                    </a>
-                    {/* Update this button to use Link */}
+                    </button>
                     <Link 
                         to="/contact" 
                         className="px-8 py-3 border-2 border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors text-lg font-medium"
