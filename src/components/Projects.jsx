@@ -9,7 +9,7 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Vite", "GitHub Pages"],
       github: "https://github.com/robertshepherd984-byte/robertshepherd984.github.io",
       live: "https://robertshepherd984-byte.github.io",
-      image: null // We'll add images later
+      image: null
     },
     {
       title: "Weather App",
@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">   {/* ← ADD THIS LINE (opening tag) */}
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -73,7 +73,7 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                {/* Links */}
+                {/* Links - Code always shows, Live Demo only for non-portfolio */}
                 <div className="flex justify-between items-center pt-4 border-t border-gray-700">
                   <a 
                     href={project.github} 
@@ -86,24 +86,28 @@ const Projects = () => {
                     </svg>
                     Code
                   </a>
-                  <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-1"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    Live Demo
-                  </a>
+                  
+                  {/* Only show Live Demo for non-portfolio projects */}
+                  {project.title !== "Personal Portfolio Website" && (
+                    <a 
+                      href={project.live} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-1"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View All Link (if you have more projects) */}
+        {/* View All Link */}
         <div className="text-center mt-12">
           <a 
             href="https://github.com/robertshepherd984-byte" 
