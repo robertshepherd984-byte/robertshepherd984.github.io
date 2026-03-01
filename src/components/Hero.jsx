@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'; // Add this import at the top
+
 const Hero = () => {
     return(
         <section className="min-h-screen flex items-center bg-gray-900">
@@ -13,9 +15,13 @@ const Hero = () => {
                     <a href="#projects" className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium">
                         View My Work
                     </a>
-                    <a href="#contact" className="px-8 py-3 border-2 border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors text-lg font-medium">
+                    {/* Update this button to use Link */}
+                    <Link 
+                        to="/contact" 
+                        className="px-8 py-3 border-2 border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors text-lg font-medium"
+                    >
                         Contact Me
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './pages/About'; // Import the real About page
+import About from './pages/About';
+import ContactForm from './components/ContactForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             </div>
           } />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </div>
     </Router>
